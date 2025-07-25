@@ -1,0 +1,32 @@
+to_do_list():
+tasks=[]
+while True:
+print("1.Add task")
+print("2.show task")
+print("3. Remove Task")
+print("4.Mark task is done")
+print("5.qiut")
+choice=input("enter your choice")
+if choice=='1':
+a=int(input("how many tasks do u want to add"))
+for i in range(a):
+task=input("enter your task")
+tasks.append(task)
+print("task added")
+elif choice=='2':
+for task in tasks:
+print("the task is",task)
+elif choice=='3':
+r=int(input("enter the task to be removed"))
+if o<=r<len(tasks):
+tasks.remove(task)
+print("the remaining task is",task)
+if choice=='4':
+m=int(input("enter the task to be marked done"))
+for i in range(m):
+print(tasks[i]."=Done")
+elif choice=='5':
+break
+else:
+print("enter the valid number")
+do_to_list()
