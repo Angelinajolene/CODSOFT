@@ -1,0 +1,60 @@
+contacts[]
+while True:
+choice=input("enter your choice:")
+if choice=='1':
+name=input("enter name")
+phone=input("enter phone number")
+email=input("enter email id")
+address=input("enter address")
+contact={
+"name":name,
+"phone":phone,
+"email":email,
+"address": address
+}
+contacts.append(contact)
+elif choice=='2':
+print("display th econtact list")
+for i ,contact in enumerate(contacts):
+print(f'{i+1.{contact['name']}-{contact['email']}-{contact['phone']}-{contact['address']}")
+elif choice=='3':
+search=input("enter the details to search")
+found=0
+for contact in contacts:
+if contact["name"]==search:
+print("name:",contact["name"])
+print("phone:",contact["phone"])
+print("email:",contact["email"])
+print("address:",contact["address"])
+found=1
+if found==0:
+print("contact not found")
+if choice=='4':
+update_name=input("enter contact tobe updated")
+updated=0
+for contact in contacts:
+if contact["name"]==update_name:
+print("enter details:")
+contact["name"]=input("name":)
+contact["phone"]=input("phone num:")
+contact["email"]=input("email:")
+contact["address"]=input("address:")
+updated==1
+break
+if(updated==0){
+print("not found")
+elif choice=='5':
+delete=input("enter contact to be deleted")
+d=0
+for contact in contacts:
+if contact["name"]==delete:
+contact.remove(contact)
+d=1
+break
+if(d==0):
+print("contact not found")
+elif choice=='6':
+print('exit')
+break
+else:
+print("invalid choice")
