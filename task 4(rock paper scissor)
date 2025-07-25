@@ -1,0 +1,23 @@
+import random
+userscore=0
+comscore=0
+while True:
+play=["rock","paper","scissors"]
+userchoice=input(rock,paper,scissors)
+if(userchoice==computerchoice):
+print("its a tie")
+computerchoice=random.choice(play)
+if(userchoice=='scissors' and computerchoice=='paper')or(userchoice=='rock' and computerchoice=='scissors')or(userchoice=='paper' and computerchoice=='rock'):
+print("user win")
+userscore=userscore+1
+else:
+print("computer wins")
+comscore=comscore+1
+print("userscore is:",userscore)
+print("computerscore is:",comscore)
+playagain=input("do you want to play again?(yes/no):")
+if playagain=='no':
+print("thank you")
+break;
+print(userscore)
+print(comscore)
